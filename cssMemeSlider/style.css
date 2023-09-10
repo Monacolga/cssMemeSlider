@@ -28,11 +28,11 @@ input {
   overflow: visible;
 }
 
-/* [type="checkbox"],
+[type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
   padding: 0;
-} */
+}
 
 .wrapper {
   width: 64rem;
@@ -48,6 +48,7 @@ input {
   width: 100%;
   height: 40rem;
   margin: 0 auto 2rem;
+  border: 0.125rem solid rgb(75, 31, 31);
   border-radius: 0.625rem;
   overflow: hidden;
 }
@@ -74,12 +75,25 @@ input {
 .slider-content {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+.text-container {
+  /* width: 70%; */
+  overflow: hidden;
+}
+
+.slider-text {
+  width: 400%;
+  display: flex;
 }
 
 .img-text {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 2rem;
-  margin: 0 0 0 2rem;
+  width: 100%;
+  margin: 0 0 0 1rem;
 }
 
 .controller-block {
@@ -90,7 +104,7 @@ input {
   width: 2.5rem;
   height: 2.5rem;
   text-align: center;
-  padding: 0.7rem 0.2rem 0 0;
+  padding: 0.7rem 0 0;
   cursor: pointer;
   transition: all 0.5s ease;
 }
@@ -98,13 +112,12 @@ input {
 .label:hover .custom-radio {
   cursor: pointer;
   transition: all 0.5s ease;
-  background-color: rgb(159, 159, 159);
+  background-color: rgb(135, 189, 255);
+  transform: scale(1.09);
 }
 
 .input {
-  width: 0;
-  height: 0;
-  visibility: hidden;
+  display: none;
 }
 
 .custom-radio {
@@ -112,27 +125,78 @@ input {
 
   width: 1.2rem;
   height: 1.2rem;
-  border: 0.18rem solid black;
+  border: 0.15rem solid black;
   border-radius: 3.125rem;
   transition: all 0.5s ease;
 }
 
-.input:checked + .custom-radio {
-  transition: all 0.5s ease;
-  background-color: rgb(31, 31, 228);
-}
-
-#slide1:checked ~ .slider {
+#slide1:checked ~ .slider-container > .slider {
   transform: translateX(0);
 }
-#slide2:checked ~ .slider {
+
+#slide2:checked ~ .slider-container > .slider {
   transform: translateX(-25%);
 }
-#slide3:checked ~ .slider {
+
+#slide3:checked ~ .slider-container > .slider {
   transform: translateX(-50%);
 }
-#slide4:checked ~ .slider {
+
+#slide4:checked ~ .slider-container > .slider {
   transform: translateX(-75%);
+}
+
+#slide1:checked
+  ~ .slider-content
+  .controller-block
+  label[for="slide1"]
+  > .custom-radio {
+  transition: all 0.7s ease;
+  background-color: rgb(0, 77, 165);
+}
+
+#slide2:checked
+  ~ .slider-content
+  .controller-block
+  label[for="slide2"]
+  > .custom-radio {
+  transition: all 0.7s ease;
+  background-color: rgb(0, 77, 165);
+}
+
+#slide3:checked
+  ~ .slider-content
+  .controller-block
+  label[for="slide3"]
+  > .custom-radio {
+  transition: all 0.7s ease;
+  background-color: rgb(0, 77, 165);
+}
+
+#slide4:checked
+  ~ .slider-content
+  .controller-block
+  label[for="slide4"]
+  > .custom-radio {
+  transition: all 0.7s ease;
+  background-color: rgb(0, 77, 165);
+}
+
+#slide1:checked ~ .slider-content .text-container {
+  transition: all 0.7s ease;
+  transform: translateX(-300%);
+}
+#slide2:checked ~ .slider-content .text-container {
+  transition: all 0.7s ease;
+  transform: translateX(-200%);
+}
+#slide3:checked ~ .slider-content .text-container {
+  transition: all 0.7s ease;
+  transform: translateX(-100%);
+}
+#slide4:checked ~ .slider-content .text-container {
+  transition: all 0.7s ease;
+  transform: translateX(0);
 }
 
 @media (max-width: 768px) {
