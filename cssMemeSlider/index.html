@@ -7,31 +7,73 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main>
-      <div class="main-wrapper">
-        <div class="img-container">
-          <img src="" alt="image" />
-        </div>
-        <div class="container">
-          <p class="img-text"></p>
-          <div class="controller-block">
-            <label for="slide1">
-              <input type="radio" id="slide1" />
-            </label>
-            <label for="slide2">
-              <input type="radio" id="slide2" />
-            </label>
-            <label for="slide3">
-              <input type="radio" id="slide3" />
-            </label>
-            <label for="slide4">
-              <input type="radio" id="slide4" />
-            </label>
+    <div class="wrapper">
+      <div class="slider-container">
+        <input
+          class="input"
+          type="radio"
+          name="slide"
+          data-id="slide1"
+          id="slide1"
+          checked
+        />
+        <input
+          class="input"
+          type="radio"
+          name="slide"
+          data-id="slide2"
+          id="slide2"
+        />
+        <input
+          class="input"
+          type="radio"
+          name="slide"
+          data-id="slide3"
+          id="slide3"
+        />
+        <input
+          class="input"
+          type="radio"
+          name="slide"
+          data-id="slide4"
+          id="slide4"
+        />
+        <div class="slider">
+          <div class="slider-item item1">
+            <img src="./img/advert.jpg" alt="image" />
+          </div>
+          <div class="slider-item item2">
+            <img src="./img/builder.jpg" alt="image" />
+          </div>
+          <div class="slider-item item3">
+            <img src="./img/best.jpg" alt="image" />
+          </div>
+          <div class="slider-item item4">
+            <img src="./img/bug.jpg" alt="image" />
           </div>
         </div>
       </div>
-    </main>
-    <footer></footer>
+      <div class="slider-content">
+        <p class="img-text" data-text="slide1">Все в Rolling Scopes School!</p>
+        <p class="img-text" data-text="slide2">Text 2</p>
+        <p class="img-text" data-text="slide3">Text 3</p>
+        <p class="img-text" data-text="slide4">Text 4</p>
+        <p class="img-text"></p>
+        <div class="controller-block">
+          <label class="label" for="slide1">
+            <span class="custom-radio"></span>
+          </label>
+          <label class="label" for="slide2">
+            <span class="custom-radio"></span>
+          </label>
+          <label class="label" for="slide3">
+            <span class="custom-radio"></span>
+          </label>
+          <label class="label" for="slide4">
+            <span class="custom-radio"></span>
+          </label>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
