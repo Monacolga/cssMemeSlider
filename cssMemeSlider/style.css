@@ -16,7 +16,7 @@ body {
   height: 100%;
   min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   background-color: rgb(244, 234, 228);
 }
 
@@ -79,13 +79,15 @@ input {
 }
 
 .text-container {
-  /* width: 70%; */
+  width: 70%;
+  height: 2.6rem;
   overflow: hidden;
 }
 
 .slider-text {
-  width: 400%;
-  display: flex;
+  width: 100%;
+  height: 10.4rem;
+  display: block;
 }
 
 .img-text {
@@ -93,8 +95,21 @@ input {
     "Lucida Sans", Arial, sans-serif;
   font-size: 2rem;
   width: 100%;
+  height: 2.6rem;
   margin: 0 0 0 1rem;
 }
+
+/* .img-text[data-text="slide4"] {
+  background-color: aqua;
+}
+
+.img-text[data-text="slide3"] {
+  background-color: rgb(40, 207, 143);
+}
+
+.img-text[data-text="slide2"] {
+  background-color: rgb(202, 62, 156);
+} */
 
 .controller-block {
   display: flex;
@@ -182,27 +197,44 @@ input {
   background-color: rgb(0, 77, 165);
 }
 
-#slide1:checked ~ .slider-content .text-container {
-  transition: all 0.7s ease;
-  transform: translateX(-300%);
+#slide1:checked ~ .slider-content .slider-text {
+  transition: all 0.3s ease;
+  transform: translateY(0);
 }
-#slide2:checked ~ .slider-content .text-container {
-  transition: all 0.7s ease;
-  transform: translateX(-200%);
+#slide2:checked ~ .slider-content .slider-text {
+  transition: all 0.3s ease;
+  transform: translateY(-2.6rem);
 }
-#slide3:checked ~ .slider-content .text-container {
-  transition: all 0.7s ease;
-  transform: translateX(-100%);
+#slide3:checked ~ .slider-content .slider-text {
+  transition: all 0.3s ease;
+  transform: translateY(-5.12rem);
 }
-#slide4:checked ~ .slider-content .text-container {
-  transition: all 0.7s ease;
-  transform: translateX(0);
+#slide4:checked ~ .slider-content .slider-text {
+  transition: all 0.3s ease;
+  transform: translateY(-7.7rem);
 }
 
 @media (max-width: 768px) {
   .wrapper {
-    max-width: 768px;
+    width: 48rem;
     margin: auto;
     padding: 0 1.25rem;
+  }
+
+  .slider-container {
+    margin-top: 1rem;
+    height: 30rem;
+  }
+
+  .slider-content {
+    flex-direction: column-reverse;
+  }
+  .controller-block {
+    margin: 0 auto 1rem;
+  }
+
+  .text-container {
+    width: 50%;
+    margin-bottom: 2rem;
   }
 }
