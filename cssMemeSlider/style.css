@@ -44,7 +44,6 @@ input {
 
 .slider-container {
   width: 100%;
-  /* height: 40rem; */
   margin: 0 auto 2rem;
   border: 0.125rem solid rgb(0, 96, 108);
   border-radius: 0.625rem;
@@ -55,7 +54,6 @@ input {
   display: flex;
   justify-content: space-between;
   width: 400%;
-  /* height: 100%; */
   transition: all 0.5s ease;
 }
 
@@ -151,6 +149,7 @@ input {
   > .custom-radio {
   transition: all 0.3s ease;
   background-color: rgb(107, 255, 238);
+  border: 0.15rem solid rgb(250, 248, 113);
 }
 
 #slide2:active
@@ -160,6 +159,7 @@ input {
   > .custom-radio {
   transition: all 0.3s ease;
   background-color: rgb(107, 255, 238);
+  border: 0.15rem solid rgb(250, 248, 113);
 }
 
 #slide3:active
@@ -169,6 +169,7 @@ input {
   > .custom-radio {
   transition: all 0.3s ease;
   background-color: rgb(107, 255, 238);
+  border: 0.15rem solid rgb(250, 248, 113);
 }
 
 #slide4:active
@@ -178,6 +179,7 @@ input {
   > .custom-radio {
   transition: all 0.3s ease;
   background-color: rgb(107, 255, 238);
+  border: 0.15rem solid rgb(250, 248, 113);
 }
 
 #slide1:checked
@@ -215,7 +217,7 @@ input {
   .controller-block
   label[for="slide2"]
   > .custom-radio:hover {
-  border: 0.2rem solid rgb(0, 176, 199);
+  border: 0.15rem solid rgb(0, 176, 199);
   transform: scale(1);
   transition: all 0.3s ease;
 }
@@ -235,7 +237,7 @@ input {
   .controller-block
   label[for="slide3"]
   > .custom-radio:hover {
-  border: 0.2rem solid rgb(0, 176, 199);
+  border: 0.15rem solid rgb(0, 176, 199);
   transform: scale(1);
   transition: all 0.3s ease;
 }
@@ -255,7 +257,7 @@ input {
   .controller-block
   label[for="slide4"]
   > .custom-radio:hover {
-  border: 0.2rem solid rgb(0, 176, 199);
+  border: 0.15rem solid rgb(0, 176, 199);
   transform: scale(1);
   transition: all 0.3s ease;
 }
