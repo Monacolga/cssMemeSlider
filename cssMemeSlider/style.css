@@ -283,6 +283,51 @@ input {
   .wrapper {
     width: 53rem;
   }
+
+  .label:hover .custom-radio {
+    background-color: initial;
+    transform: none;
+  }
+
+  #slide1:checked
+    ~ .slider-content
+    .controller-block
+    label[for="slide1"]
+    > .custom-radio:hover {
+    border: none;
+    transform: none;
+    transition: none;
+  }
+
+  #slide2:checked
+    ~ .slider-content
+    .controller-block
+    label[for="slide2"]
+    > .custom-radio:hover {
+    border: none;
+    transform: none;
+    transition: none;
+  }
+
+  #slide3:checked
+    ~ .slider-content
+    .controller-block
+    label[for="slide3"]
+    > .custom-radio:hover {
+    border: none;
+    transform: none;
+    transition: none;
+  }
+
+  #slide4:checked
+    ~ .slider-content
+    .controller-block
+    label[for="slide4"]
+    > .custom-radio:hover {
+    border: none;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 768px) {
